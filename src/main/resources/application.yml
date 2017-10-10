@@ -1,0 +1,10 @@
+spring:
+  kafka:
+    bootstrap-servers: "10.45.250.116:9092, 10.45.250.115:9092, 10.45.250.110:9092"
+    #bootstrap-servers: "10.45.230.115:9092"
+    #consumer:
+      #group-id: "cdckafka"
+kafka:
+  topics:
+    customer: "cdckafka.kafka.sourcedb.kfilstl.gfpf"
+    #transaction: "cdckafka.biskafka.sourcedb.sdalluni.zjbppfcdc"

@@ -1,0 +1,36 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.7.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+		maven {
+			url "https://packages.confluent.io/maven/"
+		}
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.springframework.kafka:spring-kafka:1.2.2.RELEASE')
+	//compile('commons-codec:commons-codec:1.10')
+	compile('org.apache.avro:avro:1.8.2')
+	//compile('io.confluent:kafka-avro-serializer-3.3.0')
+	compileOnly('org.projectlombok:lombok')
+	//compile files('libs/kafka-avro-serializer-3.3.0.jar')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
