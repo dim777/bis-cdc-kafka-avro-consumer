@@ -1,11 +1,26 @@
 spring:
+  data:
+    cassandra:
+      cluster-name: "TechLabCassandraCluster"
+      contact-points: 10.45.250.112,10.45.250.113,10.45.250.114
+      port: 9042
+      keyspace-name: testKeySpace
+      username: cass_usr
+      password: cass
   kafka:
-    bootstrap-servers: "192.168.1.8:9092"
-    #bootstrap-servers: "10.45.250.116:9092, 10.45.250.115:9092, 10.45.250.110:9092"
+    bootstrap-servers: "10.45.250.116:9092, 10.45.250.115:9092, 10.45.250.110:9092"
     #bootstrap-servers: "10.45.230.115:9092"
     #consumer:
       #group-id: "cdckafka"
 kafka:
   topics:
-    customer: "cdckafka.kafka.sourcedb.kfilstl.gfpf"
+    customer: "cdckafka.kafka.sourcedb.kfilstl.gfpfcdc"
     #transaction: "cdckafka.biskafka.sourcedb.sdalluni.zjbppfcdc"
+
+app:
+  configServer: "http://localhost:9100"
+  path:
+    config: "/config"
+    loanqualitycategories: "/risksparams/loanqualitycategories"
+    loanservcoeffs: "/risksparams/loanservcoeffs"
+    loanservcoeffsmatrix: "/risksparams/loanservcoeffsmatrix"

@@ -48,9 +48,10 @@ public class BisCdcKafkaAvroConsumerApplicationTests {
 	@Autowired
 	private Sender sender;
 	@Autowired
-	private QualityService qualityService;
-	@Autowired
 	private Receiver receiver;
+
+	@Autowired
+	private QualityService qualityService;
 	@Autowired
 	private ConfigService configService;
 	@Autowired
@@ -58,7 +59,7 @@ public class BisCdcKafkaAvroConsumerApplicationTests {
 	@Autowired
 	private RiskConfigParamsService riskConfigParamsService;
 	@Autowired
-	LoanQualityResultRepository loanQualityResultRepository;
+	private LoanQualityResultRepository loanQualityResultRepository;
 
 	@Test
 	public void a_get_config_params() throws IOException {
