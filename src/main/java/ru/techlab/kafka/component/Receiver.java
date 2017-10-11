@@ -3,6 +3,7 @@ package ru.techlab.kafka.component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
+import ru.techlab.kafka.model.customer.AvroCustomer;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -19,8 +20,9 @@ public class Receiver {
     }
 
     @KafkaListener(topics = "${kafka.topics.customer}")
-    public void receiveCustomer(String payload) {
-        LOGGER.info("received payload='{}'", payload);
+    public void receiveCustomer(AvroCustomer customer) {
+        //LOGGER.info("received payload='{}'", payload);
+        LOGGER.info("received payload='{}'", customer.toString());
         latch.countDown();
     }
 

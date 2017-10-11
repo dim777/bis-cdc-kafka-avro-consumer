@@ -27,9 +27,13 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
 	compile('org.springframework.kafka:spring-kafka:1.2.2.RELEASE')
+    compile("org.springframework.boot:spring-boot-starter-web")
 	//compile('commons-codec:commons-codec:1.10')
 	compile('org.apache.avro:avro:1.8.2')
 	//compile('io.confluent:kafka-avro-serializer-3.3.0')
+	compile('org.springframework.boot:spring-boot-starter-data-cassandra')
+	compile('joda-time:joda-time:2.9.9')
+	compile files('../risks-libs/build/libs/loans-1.0-SNAPSHOT.jar')
 	compileOnly('org.projectlombok:lombok')
 	//compile files('libs/kafka-avro-serializer-3.3.0.jar')
 	testCompile('org.springframework.boot:spring-boot-starter-test')

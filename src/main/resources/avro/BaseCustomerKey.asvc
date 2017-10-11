@@ -1,0 +1,1 @@
+{"schema":"{\"type\":\"record\",\"name\":\"GFPF\",\"namespace\":\"key.SOURCEDB.KFILSTL\",\"fields\":[{\"name\":\"GFCUS\",\"type\":{\"type\":\"string\",\"logicalType\":\"CHARACTER\",\"dbColumnName\":\"GFCUS\",\"length\":6},\"default\":\"\"},{\"name\":\"GFCLC\",\"type\":{\"type\":\"string\",\"logicalType\":\"CHARACTER\",\"dbColumnName\":\"GFCLC\",\"length\":3},\"default\":\"\"}]}"}
